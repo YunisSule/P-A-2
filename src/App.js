@@ -1,7 +1,12 @@
 import './App.css';
 
-function App() {
-  return <div className="App"></div>;
-}
+import Search from './search';
 
+function App() {
+  return (
+    <div className="root">
+      <Search />
+    </div>
+  );
+}
 export default App;

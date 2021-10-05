@@ -1,0 +1,26 @@
+.root {
+}
+
+.searchBar {
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+}
+.searchBar input {
+  width: 600px;
+  height: 30px;
+  align-self: center;
+  border-style: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0.5px;
+}
+.searchBar button {
+  width: fit-content;
+  align-self: center;
+}
+
+.searchBar label {
+  align-self: center;
+}
