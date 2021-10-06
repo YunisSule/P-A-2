@@ -15,7 +15,7 @@ export default function Search() {
     setQuery('');
   }
 
-  function handleSubmit(e) {
+  function handleSubmit() {
     console.log(query);
     setSubmit(true);
 
@@ -35,6 +35,13 @@ export default function Search() {
   if (submit) {
     if (isLoading) {
       return <p>Loading...</p>;
+    } else if (!items) {
+      return (
+        <div>
+          <p>Couldn't find any recipes for {query}</p>
+          <button onClick={back}>Back</button>
+        </div>
+      );
     } else
       return (
         <div className="results">
