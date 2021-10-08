@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import Results from './results';
 
 const URL = 'https://themealdb.com/api/json/v1/1/search.php?s=';
 
@@ -32,6 +33,7 @@ export default function Search() {
         alert(error);
       });
   }
+
   if (submit) {
     if (isLoading) {
       return <p>Loading...</p>;
@@ -42,22 +44,14 @@ export default function Search() {
           <button onClick={back}>Back</button>
         </div>
       );
-    } else
-      return (
-        <div className="results">
-          <button onClick={back}>Back</button>
-          {items.map((item) => (
-            <div>
-              <h3>{item.strMeal}</h3>
-            </div>
-          ))}
-        </div>
-      );
+    } else return <Results items={items} />;
   } else
     return (
       <div>
         <form onSubmit={handleSubmit} className="searchBar">
-          <label>Search</label>
+          <label>
+            <h1>Recipe search</h1>
+          </label>
           <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
           <button>Search</button>
         </form>

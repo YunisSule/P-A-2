@@ -1,0 +1,102 @@
+export default function Recipe(props) {
+  return (
+    <div>
+      <h1>{props.meal}</h1>
+      <div id="ingredientPage">
+        <table id="ingredients">
+          <tbody>
+            <tr>
+              <th colSpan="2">Ingredients</th>
+            </tr>
+            <tr>
+              <td>{props.ing1}</td>
+              <td>{props.measure1}</td>
+            </tr>
+            <tr>
+              <td>{props.ing2}</td>
+              <td>{props.measure2}</td>
+            </tr>
+            <tr>
+              <td>{props.ing3}</td>
+              <td>{props.measure3}</td>
+            </tr>
+            <tr>
+              <td>{props.ing4}</td>
+              <td>{props.measure4}</td>
+            </tr>
+            <tr>
+              <td>{props.ing5}</td>
+              <td>{props.measure5}</td>
+            </tr>
+            <tr>
+              <td>{props.ing6}</td>
+              <td>{props.measure6}</td>
+            </tr>
+            <tr>
+              <td>{props.ing7}</td>
+              <td>{props.measure7}</td>
+            </tr>
+            <tr>
+              <td>{props.ing8}</td>
+              <td>{props.measure8}</td>
+            </tr>
+            <tr>
+              <td>{props.ing9}</td>
+              <td>{props.measure9}</td>
+            </tr>
+            <tr>
+              <td>{props.ing10}</td>
+              <td>{props.measure10}</td>
+            </tr>
+            <tr>
+              <td>{props.ing11}</td>
+              <td>{props.measure11}</td>
+            </tr>
+            <tr>
+              <td>{props.ing12}</td>
+              <td>{props.measure12}</td>
+            </tr>
+            <tr>
+              <td>{props.ing13}</td>
+              <td>{props.measure13}</td>
+            </tr>
+            <tr>
+              <td>{props.ing14}</td>
+              <td>{props.measure14}</td>
+            </tr>
+            <tr>
+              <td>{props.ing15}</td>
+              <td>{props.measure15}</td>
+            </tr>
+            <tr>
+              <td>{props.ing16}</td>
+              <td>{props.measure16}</td>
+            </tr>
+            <tr>
+              <td>{props.ing17}</td>
+              <td>{props.measure17}</td>
+            </tr>
+            <tr>
+              <td>{props.ing18}</td>
+              <td>{props.measure18}</td>
+            </tr>
+            <tr>
+              <td>{props.ing19}</td>
+              <td>{props.measure19}</td>
+            </tr>
+            <tr>
+              <td>{props.ing20}</td>
+              <td>{props.measure20}</td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="instructions">{props.instructions}</p>
+      </div>
+      <button className="backBtn">
+        <a href="results" onClick={props.backToR}>
+          back
+        </a>
+      </button>
+    </div>
+  );
+}
