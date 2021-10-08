@@ -3,10 +3,9 @@ import Recipe from './recipe';
 import uuid from 'react-uuid';
 
 export default function Results(props) {
-  const [isLoading, setisLoading] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
-  function backToR() {
+  function back() {
     setSelectedItem(null);
   }
 
@@ -55,16 +54,14 @@ export default function Results(props) {
         measure18={selectedItem.strMeasure18}
         measure19={selectedItem.strMeasure19}
         measure20={selectedItem.strMeasure20}
-        backToR={backToR}
+        back={back}
       />
     );
-  } else if (isLoading) {
-    return <p>Loading...</p>;
   } else
     return (
       <div className="results">
         <button className="backBtn" onClick={props.back}>
-          <a href="">back</a>
+          <a href="search">back</a>
         </button>
         {props.items.map((item) => (
           <div key={uuid()} className="items">

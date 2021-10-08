@@ -16,7 +16,8 @@ export default function Search() {
     setQuery('');
   }
 
-  function handleSubmit() {
+  function handleSubmit(e) {
+    e.preventDefault();
     console.log(query);
     setSubmit(true);
 

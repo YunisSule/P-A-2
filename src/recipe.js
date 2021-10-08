@@ -93,7 +93,7 @@ export default function Recipe(props) {
         <p id="instructions">{props.instructions}</p>
       </div>
       <button className="backBtn">
-        <a href="results" onClick={props.backToR}>
+        <a href="search" onClick={props.back}>
           back
         </a>
       </button>
