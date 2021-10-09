@@ -1,7 +1,7 @@
 export default function Recipe(props) {
   return (
     <div>
-      <h1>{props.meal}</h1>
+      <h2>{props.meal}</h2>
       <div id="ingredientPage">
         <table id="ingredients">
           <tbody>
@@ -92,11 +92,9 @@ export default function Recipe(props) {
         </table>
         <p id="instructions">{props.instructions}</p>
       </div>
-      <button className="backBtn">
-        <a href="search" onClick={props.back}>
-          back
-        </a>
-      </button>
+      <a className="backBtn" href="search" onClick={props.back}>
+        back to search
+      </a>
     </div>
   );
 }

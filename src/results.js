@@ -5,10 +5,6 @@ import uuid from 'react-uuid';
 export default function Results(props) {
   const [selectedItem, setSelectedItem] = useState(null);
 
-  function back() {
-    setSelectedItem(null);
-  }
-
   if (selectedItem != null) {
     return (
       <Recipe
@@ -54,15 +50,15 @@ export default function Results(props) {
         measure18={selectedItem.strMeasure18}
         measure19={selectedItem.strMeasure19}
         measure20={selectedItem.strMeasure20}
-        back={back}
+        back={props.back}
       />
     );
   } else
     return (
       <div className="results">
-        <button className="backBtn" onClick={props.back}>
-          <a href="search">back</a>
-        </button>
+        <a className="backBtn" href="search" onClick={props.back}>
+          back to search
+        </a>
         {props.items.map((item) => (
           <div key={uuid()} className="items">
             <h3>{item.strMeal}</h3>
