@@ -1,7 +1,9 @@
-export default function Recipe(props) {
+export default function Recipe() {
+  let item = JSON.parse(sessionStorage.getItem('item'));
+
   return (
     <div>
-      <h2>{props.meal}</h2>
+      <h2>{item.strMeal}</h2>
       <div id="ingredientPage">
         <table id="ingredients">
           <tbody>
@@ -9,92 +11,89 @@ export default function Recipe(props) {
               <th colSpan="2">Ingredients</th>
             </tr>
             <tr>
-              <td>{props.ing1}</td>
-              <td>{props.measure1}</td>
+              <td>{item.strIngredient1}</td>
+              <td>{item.strMeasure1}</td>
             </tr>
             <tr>
-              <td>{props.ing2}</td>
-              <td>{props.measure2}</td>
+              <td>{item.strIngredient2}</td>
+              <td>{item.strMeasure2}</td>
             </tr>
             <tr>
-              <td>{props.ing3}</td>
-              <td>{props.measure3}</td>
+              <td>{item.strIngredient3}</td>
+              <td>{item.strMeasure4}</td>
             </tr>
             <tr>
-              <td>{props.ing4}</td>
-              <td>{props.measure4}</td>
+              <td>{item.strIngredient4}</td>
+              <td>{item.strMeasure4}</td>
             </tr>
             <tr>
-              <td>{props.ing5}</td>
-              <td>{props.measure5}</td>
+              <td>{item.strIngredient5}</td>
+              <td>{item.strMeasure5}</td>
             </tr>
             <tr>
-              <td>{props.ing6}</td>
-              <td>{props.measure6}</td>
+              <td>{item.strIngredient6}</td>
+              <td>{item.strMeasure6}</td>
             </tr>
             <tr>
-              <td>{props.ing7}</td>
-              <td>{props.measure7}</td>
+              <td>{item.strIngredient7}</td>
+              <td>{item.strMeasure7}</td>
             </tr>
             <tr>
-              <td>{props.ing8}</td>
-              <td>{props.measure8}</td>
+              <td>{item.strIngredient8}</td>
+              <td>{item.strMeasure8}</td>
             </tr>
             <tr>
-              <td>{props.ing9}</td>
-              <td>{props.measure9}</td>
+              <td>{item.strIngredient9}</td>
+              <td>{item.strMeasure9}</td>
             </tr>
             <tr>
-              <td>{props.ing10}</td>
-              <td>{props.measure10}</td>
+              <td>{item.strIngredient10}</td>
+              <td>{item.strMeasure10}</td>
             </tr>
             <tr>
-              <td>{props.ing11}</td>
-              <td>{props.measure11}</td>
+              <td>{item.strIngredient11}</td>
+              <td>{item.strMeasure11}</td>
             </tr>
             <tr>
-              <td>{props.ing12}</td>
-              <td>{props.measure12}</td>
+              <td>{item.strIngredient12}</td>
+              <td>{item.strMeasure12}</td>
             </tr>
             <tr>
-              <td>{props.ing13}</td>
-              <td>{props.measure13}</td>
+              <td>{item.strIngredient13}</td>
+              <td>{item.strMeasure13}</td>
             </tr>
             <tr>
-              <td>{props.ing14}</td>
-              <td>{props.measure14}</td>
+              <td>{item.strIngredient14}</td>
+              <td>{item.strMeasure14}</td>
             </tr>
             <tr>
-              <td>{props.ing15}</td>
-              <td>{props.measure15}</td>
+              <td>{item.strIngredient15}</td>
+              <td>{item.strMeasure15}</td>
             </tr>
             <tr>
-              <td>{props.ing16}</td>
-              <td>{props.measure16}</td>
+              <td>{item.strIngredient16}</td>
+              <td>{item.strMeasure16}</td>
             </tr>
             <tr>
-              <td>{props.ing17}</td>
-              <td>{props.measure17}</td>
+              <td>{item.strIngredient17}</td>
+              <td>{item.strMeasure17}</td>
             </tr>
             <tr>
-              <td>{props.ing18}</td>
-              <td>{props.measure18}</td>
+              <td>{item.strIngredient18}</td>
+              <td>{item.strMeasure18}</td>
             </tr>
             <tr>
-              <td>{props.ing19}</td>
-              <td>{props.measure19}</td>
+              <td>{item.strIngredient19}</td>
+              <td>{item.strMeasure19}</td>
             </tr>
             <tr>
-              <td>{props.ing20}</td>
-              <td>{props.measure20}</td>
+              <td>{item.strIngredient20}</td>
+              <td>{item.strMeasure20}</td>
             </tr>
           </tbody>
         </table>
-        <p id="instructions">{props.instructions}</p>
+        <p id="instructions">{item.strInstructions}</p>
       </div>
-      <a className="backBtn" href="search" onClick={props.back}>
-        back to search
-      </a>
     </div>
   );
 }
