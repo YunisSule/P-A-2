@@ -17,7 +17,8 @@ export default function Results() {
         setItems(response.data.meals);
       })
       .catch((error) => {
-        alert(error);
+        alert('No search results');
+        window.location.replace('/');
       });
   }, []);
 
